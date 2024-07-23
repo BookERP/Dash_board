@@ -7,7 +7,7 @@ import com.ui.swing.PanelBorder;
 import com.ui.swing.ScrollBar;
 import com.ui.swing.Table;
 
-import java.awt.Color;
+import java.awt.*;
 import java.util.Objects;
 
 
@@ -15,7 +15,14 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 public class Home extends JPanel {
-
+    private Card c1;
+    private Card card2;
+    private Card card3;
+    private JLabel label;
+    private JLayeredPane panelContainer; // container
+    private PanelBorder panelBorder1;
+    private JScrollPane spTable;
+    private Table table;
     public Home() {
         initComponents();
         c1.setData(new Model_Card(new ImageIcon(Objects.requireNonNull(getClass().getResource("/com/ui/icon/stock.png"))), "Stock Total", "$200000", "Increased by 60%"));
@@ -46,7 +53,8 @@ public class Home extends JPanel {
 
     private void initComponents() {
 
-        panel = new JLayeredPane();
+        //JLayeredPane = 좌에 콘텐츠
+        panelContainer = new JLayeredPane();
         c1 = new Card();
         card2 = new Card();
         card3 = new Card();
@@ -55,26 +63,28 @@ public class Home extends JPanel {
         spTable = new JScrollPane();
         table = new Table();
 
-        setBackground(new java.awt.Color(242, 242, 242));
+        //pane 배경색
+        setBackground(Color.white);
 
-        panel.setLayout(new java.awt.GridLayout(1, 0, 10, 0));
+        //pane 컴포넌트간 레이아웃
+        panelContainer.setLayout(new GridLayout(1, 0, 10, 1));
 
-        c1.setColor1(new java.awt.Color(142, 142, 250));
-        c1.setColor2(new java.awt.Color(123, 123, 245));
-        panel.add(c1);
+        c1.setColor1(new  Color(142, 142, 250));
+        c1.setColor2(new  Color(123, 123, 245));
+        panelContainer.add(c1);
 
-        card2.setColor1(new java.awt.Color(186, 123, 247));
-        card2.setColor2(new java.awt.Color(167, 94, 236));
-        panel.add(card2);
+        card2.setColor1(new  Color(186, 123, 247));
+        card2.setColor2(new  Color(167, 94, 236));
+        panelContainer.add(card2);
 
-        card3.setColor1(new java.awt.Color(241, 208, 62));
-        card3.setColor2(new java.awt.Color(211, 184, 61));
-        panel.add(card3);
+        card3.setColor1(new  Color(241, 208, 62));
+        card3.setColor2(new  Color(211, 184, 61));
+        panelContainer.add(card3);
 
-        panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
+        panelBorder1.setBackground(new  Color(255, 255, 255));
 
-        label.setFont(new java.awt.Font("sansserif", 1, 18));
-        label.setForeground(new java.awt.Color(127, 127, 127));
+        label.setFont(new  Font("sansserif", 1, 18));
+        label.setForeground(new  Color(127, 127, 127));
         label.setText("Standard Table Design");
 
         spTable.setBorder(null);
@@ -128,26 +138,19 @@ public class Home extends JPanel {
                                 .addGap(20, 20, 20)
                                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
                                         .addComponent(panelBorder1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(panel, GroupLayout.DEFAULT_SIZE, 875, Short.MAX_VALUE))
+                                        .addComponent(panelContainer, GroupLayout.DEFAULT_SIZE, 875, Short.MAX_VALUE))
                                 .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
                 layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addGap(20, 20, 20)
-                                .addComponent(panel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(panelContainer, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                 .addGap(20, 20, 20)
                                 .addComponent(panelBorder1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(20, 20, 20))
         );
     }
 
-    private Card c1;
-    private Card card2;
-    private Card card3;
-    private JLabel label;
-    private JLayeredPane panel;
-    private PanelBorder panelBorder1;
-    private JScrollPane spTable;
-    private Table table;
+
 }

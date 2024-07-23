@@ -48,7 +48,7 @@ public class Main extends JFrame {
                 }
             }
         });
-        //  set when system open start with home form
+
         setForm(new Home());
     }
 

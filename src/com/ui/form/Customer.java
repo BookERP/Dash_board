@@ -6,28 +6,35 @@ import com.ui.swing.PanelBorder;
 import com.ui.swing.Table;
 
 import javax.swing.*;
+import javax.swing.plaf.DimensionUIResource;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Objects;
 
 public class Customer extends JPanel implements ActionListener {
+    // components
+    private JPanel j;
+    private JPanel p1,p2,p3,p4,p5,p6,p7;
+    private JTextField txtName, txtPhone, txtEmail, txtAddress, txtRDate, txtCustomerID, txtCpw;
+    private JButton  btnTotal, btnSearch, btnDel, btnUpdate, btnCancel;
+
     private Card c1;
     private Card c2;
     private Card c3;
     private JLabel label;
-    private JLayeredPane panel;
+    private JLayeredPane panelContainer;
     private PanelBorder panelBorder;
     private JScrollPane spTable;
     private Table table;
 
     public Customer() {
         initComponents();
-        c1.setData(new Model_Card(new ImageIcon(Objects.requireNonNull(getClass().getResource("/com/ui/icon/stock.png"))), "Stock Total", "$200000", "Increased by 60%"));
-
     }
+
     private void initComponents() {
-        panel = new JLayeredPane();
+
+        panelContainer = new JLayeredPane();
         c1 = new Card();
         c2 = new Card();
         c3 = new Card();
@@ -35,18 +42,17 @@ public class Customer extends JPanel implements ActionListener {
         label = new JLabel();
         spTable = new JScrollPane();
         table = new Table();
+        j = new JPanel();
+
+        panelContainer.setPreferredSize(new DimensionUIResource(400,300));
+//        panelContainer.setPreferredSize(new Dimension(400,300));
 
 
+        j.setBackground(Color.red);
 
-        setBackground(new Color(242, 242, 242));
+        new JPanel(new GridLayout(7, 0));
 
-        label.setFont(new Font("sansserif", 0, 36)); // NOI18N
-        label.setForeground(new java.awt.Color(106, 106, 106));
-        label.setHorizontalAlignment(SwingConstants.CENTER);
-        label.setText("고객정보.ErpCrud 클래스 리펙토링 필요.");
-        label.setUI(c1);
-        c1.setData(new Model_Card(new ImageIcon(Objects.requireNonNull(getClass().getResource("/com/ui/icon/stock.png"))), "Stock Total", "$200000", "Increased by 60%"));
-
+//        setBackground(new Color(242, 242, 242));
         GroupLayout layout = new GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -64,10 +70,17 @@ public class Customer extends JPanel implements ActionListener {
                                 .addGap(125, 125, 125))
         );
 
+
+
+
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
 
+    }
+
+    public static void main(String[] args) {
+        new Customer();
     }
 }
