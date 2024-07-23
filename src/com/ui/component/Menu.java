@@ -9,8 +9,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.util.Objects;
-
-
 import javax.swing.*;
 
 public class Menu extends JPanel {
@@ -34,22 +32,21 @@ public class Menu extends JPanel {
         listMenu1.addItem(new Model_Menu("2", "책 검색", Model_Menu.MenuType.MENU));
         listMenu1.addItem(new Model_Menu("3", "책 주문", Model_Menu.MenuType.MENU));
         listMenu1.addItem(new Model_Menu("4", "고객정보", Model_Menu.MenuType.MENU));
-        listMenu1.addItem(new Model_Menu("5", "Date Table", Model_Menu.MenuType.MENU));
+        listMenu1.addItem(new Model_Menu("5", "X", Model_Menu.MenuType.MENU));
         listMenu1.addItem(new Model_Menu("", " ", Model_Menu.MenuType.EMPTY));
 
         listMenu1.addItem(new Model_Menu("", "관리자", Model_Menu.MenuType.TITLE));
         listMenu1.addItem(new Model_Menu("6", "My page", Model_Menu.MenuType.MENU));
-        listMenu1.addItem(new Model_Menu("7", "ㅇ", Model_Menu.MenuType.MENU));
-        listMenu1.addItem(new Model_Menu("1", "ㅇ", Model_Menu.MenuType.MENU));
-        listMenu1.addItem(new Model_Menu("9", "ㅇ", Model_Menu.MenuType.MENU));
-        listMenu1.addItem(new Model_Menu("10", "설정", Model_Menu.MenuType.MENU));
+        listMenu1.addItem(new Model_Menu("7", "X", Model_Menu.MenuType.MENU));
+        listMenu1.addItem(new Model_Menu("1", "X", Model_Menu.MenuType.MENU));
+        listMenu1.addItem(new Model_Menu("9", "X", Model_Menu.MenuType.MENU));
+        listMenu1.addItem(new Model_Menu("10", "X", Model_Menu.MenuType.MENU));
         listMenu1.addItem(new Model_Menu("", "", Model_Menu.MenuType.EMPTY));
     }
 
     private void initComponents() {
 
         panelMoving = new JPanel();
-        // Variables declaration - do not modify//GEN-BEGIN:variables
         JLabel jLabel1 = new JLabel();
         listMenu1 = new ListMenu<>();
 

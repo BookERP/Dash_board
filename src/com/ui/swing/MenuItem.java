@@ -1,13 +1,15 @@
 package com.ui.swing;
 
 import com.ui.model.Model_Menu;
+
+import javax.swing.*;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
-public class MenuItem extends javax.swing.JPanel {
+public class MenuItem extends JPanel {
 
     private boolean selected;
     private boolean over;
@@ -37,36 +39,33 @@ public class MenuItem extends javax.swing.JPanel {
         repaint();
     }
 
-    @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbIcon = new javax.swing.JLabel();
-        lbName = new javax.swing.JLabel();
+        lbIcon = new JLabel();
+        lbName = new JLabel();
 
         lbIcon.setForeground(new java.awt.Color(255, 255, 255));
 
         lbName.setForeground(new java.awt.Color(255, 255, 255));
         lbName.setText("Menu Name");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        GroupLayout layout = new GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(lbIcon)
                 .addGap(18, 18, 18)
                 .addComponent(lbName)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbIcon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(lbName, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addComponent(lbIcon, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lbName, GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
         );
-    }// </editor-fold>//GEN-END:initComponents
-
+    }
     @Override
     protected void paintComponent(Graphics grphcs) {
         if (selected || over) {
@@ -82,8 +81,6 @@ public class MenuItem extends javax.swing.JPanel {
         super.paintComponent(grphcs);
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel lbIcon;
-    private javax.swing.JLabel lbName;
-    // End of variables declaration//GEN-END:variables
+    private JLabel lbIcon;
+    private JLabel lbName;
 }

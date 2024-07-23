@@ -60,9 +60,7 @@ public class Header extends JPanel {
         super.paintComponent(grphcs);
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private JLabel label1;
     private JLabel label2;
     private SearchText searchText1;
-    // End of variables declaration//GEN-END:variables
 }

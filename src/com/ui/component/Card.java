@@ -78,8 +78,7 @@ public class Card extends JPanel {
                                 .addComponent(lbDescription)
                                 .addContainerGap(25, Short.MAX_VALUE))
         );
-    }// </editor-fold>//GEN-END:initComponents
-
+    }
     @Override
     protected void paintComponent(Graphics grphcs) {
         Graphics2D g2 = (Graphics2D) grphcs;

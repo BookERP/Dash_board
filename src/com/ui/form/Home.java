@@ -18,7 +18,7 @@ public class Home extends JPanel {
 
     public Home() {
         initComponents();
-        card1.setData(new Model_Card(new ImageIcon(Objects.requireNonNull(getClass().getResource("/com/ui/icon/stock.png"))), "Stock Total", "$200000", "Increased by 60%"));
+        c1.setData(new Model_Card(new ImageIcon(Objects.requireNonNull(getClass().getResource("/com/ui/icon/stock.png"))), "Stock Total", "$200000", "Increased by 60%"));
         card2.setData(new Model_Card(new ImageIcon(Objects.requireNonNull(getClass().getResource("/com/ui/icon/profit.png"))), "Total Profit", "$15000", "Increased by 25%"));
         card3.setData(new Model_Card(new ImageIcon(Objects.requireNonNull(getClass().getResource("/com/ui/icon/flag.png"))), "Unique Visitors", "$300000", "Increased by 70%"));
         //  add row table
@@ -47,11 +47,11 @@ public class Home extends JPanel {
     private void initComponents() {
 
         panel = new JLayeredPane();
-        card1 = new Card();
+        c1 = new Card();
         card2 = new Card();
         card3 = new Card();
         panelBorder1 = new PanelBorder();
-        jLabel1 = new JLabel();
+        label = new JLabel();
         spTable = new JScrollPane();
         table = new Table();
 
@@ -59,9 +59,9 @@ public class Home extends JPanel {
 
         panel.setLayout(new java.awt.GridLayout(1, 0, 10, 0));
 
-        card1.setColor1(new java.awt.Color(142, 142, 250));
-        card1.setColor2(new java.awt.Color(123, 123, 245));
-        panel.add(card1);
+        c1.setColor1(new java.awt.Color(142, 142, 250));
+        c1.setColor2(new java.awt.Color(123, 123, 245));
+        panel.add(c1);
 
         card2.setColor1(new java.awt.Color(186, 123, 247));
         card2.setColor2(new java.awt.Color(167, 94, 236));
@@ -73,9 +73,9 @@ public class Home extends JPanel {
 
         panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(127, 127, 127));
-        jLabel1.setText("Standard Table Design");
+        label.setFont(new java.awt.Font("sansserif", 1, 18));
+        label.setForeground(new java.awt.Color(127, 127, 127));
+        label.setText("Standard Table Design");
 
         spTable.setBorder(null);
 
@@ -105,7 +105,7 @@ public class Home extends JPanel {
                                 .addGap(20, 20, 20)
                                 .addGroup(panelBorder1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                         .addGroup(panelBorder1Layout.createSequentialGroup()
-                                                .addComponent(jLabel1)
+                                                .addComponent(label)
                                                 .addGap(0, 0, Short.MAX_VALUE))
                                         .addComponent(spTable))
                                 .addContainerGap())
@@ -114,7 +114,7 @@ public class Home extends JPanel {
                 panelBorder1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(panelBorder1Layout.createSequentialGroup()
                                 .addGap(20, 20, 20)
-                                .addComponent(jLabel1)
+                                .addComponent(label)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(spTable, GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
                                 .addGap(20, 20, 20))
@@ -140,13 +140,12 @@ public class Home extends JPanel {
                                 .addComponent(panelBorder1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(20, 20, 20))
         );
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-
-    private Card card1;
+    private Card c1;
     private Card card2;
     private Card card3;
-    private JLabel jLabel1;
+    private JLabel label;
     private JLayeredPane panel;
     private PanelBorder panelBorder1;
     private JScrollPane spTable;
