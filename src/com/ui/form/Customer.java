@@ -44,7 +44,7 @@ public class Customer extends JPanel implements ActionListener {
         label.setForeground(new java.awt.Color(106, 106, 106));
         label.setHorizontalAlignment(SwingConstants.CENTER);
         label.setText("고객정보.ErpCrud 클래스 리펙토링 필요.");
-        label.setUI(c1);
+//        label.setUI(c1);
         c1.setData(new Model_Card(new ImageIcon(Objects.requireNonNull(getClass().getResource("/com/ui/icon/stock.png"))), "Stock Total", "$200000", "Increased by 60%"));
 
         GroupLayout layout = new GroupLayout(this);

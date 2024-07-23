@@ -59,16 +59,16 @@ public class Home extends JPanel {
 
         panel.setLayout(new java.awt.GridLayout(1, 0, 10, 0));
 
-        c1.setColor1(new java.awt.Color(142, 142, 250));
-        c1.setColor2(new java.awt.Color(123, 123, 245));
+//        c1.setColor1(new java.awt.Color(142, 142, 250));
+//        c1.setColor2(new java.awt.Color(123, 123, 245));
         panel.add(c1);
 
-        card2.setColor1(new java.awt.Color(186, 123, 247));
-        card2.setColor2(new java.awt.Color(167, 94, 236));
+//        card2.setColor1(new java.awt.Color(186, 123, 247));
+//        card2.setColor2(new java.awt.Color(167, 94, 236));
         panel.add(card2);
 
-        card3.setColor1(new java.awt.Color(241, 208, 62));
-        card3.setColor2(new java.awt.Color(211, 184, 61));
+//        card3.setColor1(new java.awt.Color(241, 208, 62));
+//        card3.setColor2(new java.awt.Color(211, 184, 61));
         panel.add(card3);
 
         panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
