@@ -10,7 +10,7 @@ public class Conn {
             synchronized (Conn.class) {
                 if (con == null) {
                     try {
-                        String url = "jdbc:oracle:thin:@bookerpmsa_high?TNS_ADMIN=C:/Wallet_BookERPMSA";
+                        String url = "jdbc:oracle:thin:@bookerpmsa_high?TNS_ADMIN=C:/Users/user/Desktop/Wallet_BookERPMSA";
                         String user = "ADMIN";
                         String password = "Madwolves9810!";
                         con = DriverManager.getConnection(url, user, password);
